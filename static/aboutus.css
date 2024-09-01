@@ -1,0 +1,140 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar img {
+    height: 50px; /* Adjust height as needed */
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar ul li:first-child {
+    margin-left: 0;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    padding-top: 50px; /* Adjust as needed */
+    padding-top: 50px; /* Adjust as needed */
+    margin-bottom: 100px; /* Adjust to make space for the footer */
+    margin-top: -50px; /* Adjust to move the content up */
+}
+
+.about-section {
+    float: right; /* Align the about section to the right */
+    width: 50%; /* Adjust width as needed */
+}
+
+.about-section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-decoration:underline;
+
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.image-section {
+    float: left; /* Align the image section to the left */
+    width: 40%; /* Adjust width as needed */
+    height: 400px;
+
+}
+
+.image-section img {
+    width: 120%; /* Make the image responsive */
+    height: 352px;
+}
+
+.learn-more {
+    color: blue; /* Initial color */
+    cursor: pointer; /* Show pointer on hover */
+}
+
+.learn-more:hover {
+    color: darkblue; /* Color change on hover */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.team-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-member {
+    flex-basis: 45%; /* Adjust width as needed */
+    margin-top: 10px; /* Adjust margin as needed */
+}
+
+.team-member .name {
+    font-weight: bold;
+    display: block; /* To move the name to a new line */
+    margin-top: -10px; /* Adjust margin-top as needed */
+
+}
+
+.team-member .specialization {
+    font-style: italic;
+    color: #ccc; /* Adjust color as needed */
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: lightgrey; /* Change color on hover */
+}
+

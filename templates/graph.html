@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver State Graph</title>
+    <link rel="stylesheet" href="static/style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+
+</head>
+<body>
+   
+    <div class="main-page">
+        <div class="side_line"></div>
+        <div class="side_bar">
+            <span class="circle" id="startButton"><i class="material-icons" style="font-size:36px; color:white">play_arrow<span class="material-symbols-outlined"></i></span>
+            <span class="circle" id="stopButton"><i class="material-icons" style="font-size:36px; color:white">pause<span class="material-symbols-outlined"></i></span>
+            <span class="circle" id="statusButton"><i class="material-icons" style="font-size:36px; color:white">show_chart<span class="material-symbols-outlined"></i></span>                      
+            <span class="circle" onclick="quit()"><i class="material-icons" style="font-size:36px; color:white">close<span class="material-symbols-outlined"></i></span>
+
+        </div>
+
+        <div class="right_panel">
+            <div class="header">
+                <div class="empty"></div>
+                <h1>Status</h1>
+                <div class="logo-container"></div>
+            </div>
+    
+            <div class="frame-container">
+                <img src="{{ graph_url }}" alt="Graph">
+            </div>
+
+        </div>
+        
+    </div>
+
+    <script>
+        var startButton = document.getElementById("startButton");
+        startButton.addEventListener("click", function() {
+        window.location.href = "/start_detection";
+        });
+
+        function quit() {
+            // Make an AJAX request to the Flask route to stop video streaming
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/quit", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        // Redirect to the root route after successful quitting
+                        window.location.href = "/";
+                    } else {
+                        console.error("Failed to quit detection");
+                    }
+                }
+            };
+            xhr.send();
+        }
+    </script>
+
+
+    
+</body>
+</html>
